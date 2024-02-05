@@ -200,11 +200,19 @@ class HomeView extends StatelessWidget {
                       )
                     ],
                   )),
+              const SizedBox(
+                height: 10,
+              ),
               HomeComponents.bodyConatiner(context,
                   child: Column(
                     children: [
-                      AppText.text('Week TimeLogs'),
-                      AppText.text('Week TimeLogs'),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          AppText.text('Week TimeLogs'),
+                          AppText.text('3h 43m This Week'),
+                        ],
+                      ),
                     ],
                   ))
             ],

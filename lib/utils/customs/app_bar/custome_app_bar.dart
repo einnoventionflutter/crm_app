@@ -6,10 +6,10 @@ import '../app_text/app_text.dart';
 
 class CustomeAppBar {
   static AppBar simpleAppBar(
-      {String title = "Purchased Deals",
+      {String title = "",
       bool isBackButton = true,
       GestureTapCallback? onBackButtonPressed,
-      Color backgroundColor = AppColors.primaryColor,
+      Color backgroundColor = const Color.fromARGB(255, 4, 48, 83),
       Color iconColor = AppColors.background,
       List<Widget>? actions,
       Color textColor = AppColors.background}) {
