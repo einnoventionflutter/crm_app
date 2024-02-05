@@ -1,22 +1,22 @@
+import 'package:crm_app/modules/home/views/home_view.dart';
+import 'package:crm_app/utils/app_routes/app_routes.dart';
 import 'package:get/get.dart';
-
-import 'app_routes.dart';
 
 class AppPages {
   static Transition transitionType = Transition.rightToLeft;
 
   static final routes = [
-    // GetPage(
-    //   name: AppRoutes.ON_BOARDING,
-    //   page: () => const OnboardingView(),
-    //   transition: transitionType,
-    //   binding: BindingsBuilder(
-    //     () {
-    //       Get.lazyPut<OnboardingController>(
-    //         () => OnboardingController(),
-    //       );
-    //     },
-    //   ),
-    // ),
+    GetPage(
+      name: AppRoutes.HOME_VIEW,
+      page: () => const HomeView(),
+      transition: transitionType,
+      binding: BindingsBuilder(
+        () {
+          // Get.lazyPut<OnboardingController>(
+          //   () => OnboardingController(),
+          // );
+        },
+      ),
+    ),
   ];
 }

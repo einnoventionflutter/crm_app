@@ -53,8 +53,14 @@ class Appbutton {
                 )
               : Center(
                   child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
+                    if (isIcon) ...{
+                      Icon(
+                        icon,
+                        color: textColor,
+                      ),
+                    },
                     AppText.text(
                       title,
                       fontsize: fontsize == 0
@@ -63,15 +69,6 @@ class Appbutton {
                       fontweight: FontWeight.w700,
                       color: textColor,
                     ),
-                    if (isIcon) ...{
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Icon(
-                        icon,
-                        color: textColor,
-                      ),
-                    }
                   ],
                 )),
         ),

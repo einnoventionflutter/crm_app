@@ -4,9 +4,9 @@ class AppColors {
   // ignore: prefer_const_declarations
   static const Color primaryDark = Color.fromARGB(255, 10, 100, 84);
   static const Color primaryLight = Color.fromARGB(255, 42, 136, 119);
-  static const Color primaryColor = Color(0xff24695c);
+  static const Color primaryColor = Color(0xff181c34);
   static const Color secondaryColor = Color(0xff3cb97e);
-  static const Color primaryButtonColor = Color(0xff24695c);
+  static const Color primaryButtonColor = Color(0xff29304c);
   static const Color whiteColor = Colors.white;
   static const Color black = Colors.black;
   static const Color fieldColor = Color(0xffF7B287);
