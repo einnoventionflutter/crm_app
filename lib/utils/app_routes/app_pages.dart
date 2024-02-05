@@ -1,7 +1,5 @@
 import 'package:get/get.dart';
 
-import 'app_routes.dart';
-
 class AppPages {
   static Transition transitionType = Transition.rightToLeft;
 
