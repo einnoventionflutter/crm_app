@@ -9,13 +9,13 @@ class Appbutton {
     required BuildContext context,
     String title = "",
     required Function callback,
-    double height = 50,
+    double height = 40,
     Color textColor = AppColors.background,
     double width = 50,
     bool isShadow = true,
     bool isIcon = false,
     IconData icon = Icons.send,
-    double fontsize = 14,
+    double fontsize = 12,
     bool onlyIcon = false,
     double borderradius = 10,
     Color backGroundColor = AppColors.primaryButtonColor,
@@ -59,6 +59,7 @@ class Appbutton {
                       Icon(
                         icon,
                         color: textColor,
+                        size: 15,
                       ),
                     },
                     AppText.text(

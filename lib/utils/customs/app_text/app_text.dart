@@ -42,7 +42,7 @@ class AppText {
     text, {
     textAlignment = TextAlign.center,
     color = AppColors.white,
-    double fontsize = 14.0,
+    double fontsize = 10.0,
     TextOverflow feildOverFlow = TextOverflow.ellipsis,
     maxlines,
     FontWeight fontweight = FontWeight.w500,

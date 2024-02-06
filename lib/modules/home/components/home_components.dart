@@ -41,8 +41,10 @@ class HomeComponents {
     bool elevation = false,
   }) {
     return Container(
-      padding: const EdgeInsets.all(8),
-      margin: elevation ? const EdgeInsets.symmetric(horizontal: 5) : null,
+      padding: const EdgeInsets.all(14),
+      margin: elevation
+          ? const EdgeInsets.symmetric(horizontal: 15, vertical: 10)
+          : null,
       width: AppConfig(context).width,
       decoration: BoxDecoration(
           color: AppColors.primaryColor,
