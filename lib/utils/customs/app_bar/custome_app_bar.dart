@@ -1,44 +1,104 @@
+import 'package:crm_app/utils/customs/app_button/app_button.dart';
+import 'package:crm_app/utils/customs/app_text/app_text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../app_theme/app_colors.dart';
-import '../app_text/app_text.dart';
 
 class CustomeAppBar {
   static AppBar simpleAppBar(
-      {String title = "",
-      bool isBackButton = true,
-      GestureTapCallback? onBackButtonPressed,
-      Color backgroundColor = const Color.fromARGB(255, 4, 48, 83),
-      Color iconColor = AppColors.background,
-      List<Widget>? actions,
-      Color textColor = AppColors.background}) {
+    BuildContext context, {
+    GestureTapCallback? onBackButtonPressed,
+    Color backgroundColor = AppColors.primaryColor,
+    Color iconColor = AppColors.background,
+  }) {
     return AppBar(
       backgroundColor: backgroundColor,
-      title: AppText.text(
-        title,
-        color: textColor,
-        fontsize: 18,
-        fontweight: FontWeight.w700,
-      ),
       iconTheme: IconThemeData(color: iconColor),
       automaticallyImplyLeading: true,
-      leading: isBackButton
-          ? GestureDetector(
-              onTap: onBackButtonPressed ??
-                  () {
-                    Get.back();
-                  },
-              child: SizedBox(
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: iconColor,
-                  size: 20,
-                ),
+      shape: const Border(
+        bottom: BorderSide(
+          color: Colors.grey,
+        ),
+      ),
+      actions: [
+        Appbutton().primaryButton(
+          context: context,
+          callback: () {},
+          title: "Stop Timer",
+          backGroundColor: const Color.fromARGB(255, 214, 39, 27),
+          textColor: Colors.white,
+          width: 100,
+          height: 40,
+          fontsize: 15,
+          borderradius: 5,
+          isShadow: false,
+          fontWeight: FontWeight.w400,
+        ),
+        appBarActionButton(
+          counts: "1",
+          icon: FontAwesomeIcons.clock,
+          iconSize: 20,
+        ),
+        appBarActionButton(
+          icon: Icons.add_circle_outline,
+          iconSize: 25,
+        ),
+        appBarActionButton(
+          counts: "95",
+          icon: Icons.notifications,
+          iconSize: 25,
+        ),
+        appBarActionButton(
+          icon: FontAwesomeIcons.powerOff,
+          iconSize: 20,
+        ),
+      ],
+    );
+  }
+
+  static Widget appBarActionButton({
+    IconData? icon,
+    double? iconSize,
+    String? counts,
+  }) {
+    return SizedBox(
+      width: 45,
+      height: 45,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Positioned(
+            child: InkWell(
+              onTap: () {},
+              child: Icon(
+                icon ?? FontAwesomeIcons.powerOff,
+                size: iconSize ?? 18,
               ),
-            )
-          : null,
-      actions: actions ?? [],
+            ),
+          ),
+          if (counts != null)
+            Positioned(
+              right: 0,
+              top: 0,
+              child: Container(
+                constraints: const BoxConstraints(minWidth: 18.0),
+                padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 1),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 0, 89, 255),
+                  borderRadius: BorderRadius.circular(35),
+                ),
+                child: Center(
+                    child: AppText.text(
+                  counts,
+                  fontsize: 14,
+                  fontweight: FontWeight.w500,
+                  color: Colors.white,
+                )),
+              ),
+            ),
+        ],
+      ),
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:crm_app/utils/app_config.dart';
-import 'package:crm_app/utils/customs/app_bar/custome_app_bar.dart';
 import 'package:crm_app/utils/customs/app_custom_drop_down.dart';
 import 'package:crm_app/utils/customs/app_text/app_text.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 
 class AttendanceView extends StatelessWidget {
@@ -15,9 +15,6 @@ class AttendanceView extends StatelessWidget {
     final daysInMonth = DateTime(now.year, now.month + 1, 0).day;
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 3, 42, 73),
-      appBar: CustomeAppBar.simpleAppBar(
-        title: "Attendance",
-      ),
       body: Container(
         margin: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
         child: Column(
@@ -330,6 +327,6 @@ class TextWithIcons {
     TextWithIcons(Icons.star_half_rounded, "Half Day", Colors.red),
     TextWithIcons(Icons.info, "Late", Colors.blue),
     TextWithIcons(Icons.close_rounded, "Absent", Colors.grey),
-    TextWithIcons(Icons.airplane_ticket_outlined, "On Leave", Colors.red),
+    TextWithIcons(FontAwesomeIcons.planeDeparture, "On Leave", Colors.red),
   ];
 }

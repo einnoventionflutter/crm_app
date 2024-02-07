@@ -1,5 +1,4 @@
 import 'package:crm_app/utils/app_theme/app_colors.dart';
-import 'package:crm_app/utils/customs/app_bar/custome_app_bar.dart';
 import 'package:crm_app/utils/customs/app_button/app_button.dart';
 import 'package:crm_app/utils/customs/app_text/app_text.dart';
 import 'package:flutter/material.dart';
@@ -32,12 +31,66 @@ class HomeView extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
-      appBar: CustomeAppBar.simpleAppBar(title: 'Dashboard'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(height: 15),
+              AppText.text(
+                "Welcome Jabran Haider",
+                color: Colors.white,
+                fontsize: 22,
+                fontweight: FontWeight.w500,
+              ),
+              const SizedBox(height: 35),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppText.text(
+                          "12:50 pm",
+                          fontsize: 20,
+                          color: Colors.white,
+                        ),
+                        const SizedBox(height: 5),
+                        AppText.text(
+                          "Wednesday",
+                          fontsize: 12,
+                          color: Colors.white,
+                          fontweight: FontWeight.w400,
+                        ),
+                        const SizedBox(height: 5),
+                        AppText.text(
+                          "Check in at - 10:24 am",
+                          fontsize: 12,
+                          color: Colors.grey,
+                          fontweight: FontWeight.w500,
+                        ),
+                      ],
+                    ),
+                    Appbutton().primaryButton(
+                      context: context,
+                      callback: () {},
+                      title: "Check Out",
+                      backGroundColor: const Color.fromARGB(255, 226, 27, 13),
+                      width: 120,
+                      borderradius: 3,
+                      fontWeight: FontWeight.w500,
+                      fontsize: 14,
+                      isShadow: false,
+                      isIcon: true,
+                      icon: Icons.logout,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 40),
               HomeComponents.bodyConatiner(
                 context,
                 child: Padding(
@@ -47,18 +100,18 @@ class HomeView extends StatelessWidget {
                       Row(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(5),
                             child: const Image(
                               image: AssetImage(
                                 'assets/images/pic.jpeg',
                               ),
-                              width: 60,
-                              height: 60,
+                              width: 80,
+                              height: 80,
                               fit: BoxFit.cover,
                             ),
                           ),
                           const SizedBox(
-                            width: 30,
+                            width: 20,
                           ),
                           Row(
                             children: [
@@ -67,12 +120,26 @@ class HomeView extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   AppText.text(
-                                    'Name',
-                                    color: AppColors.white,
+                                    'Jabran Haider',
+                                    fontsize: 18,
+                                    fontweight: FontWeight.w600,
+                                    color: Colors.white,
                                   ),
-                                  AppText.text('Feild', color: AppColors.white),
-                                  AppText.text('Employee_Id',
-                                      color: AppColors.white),
+                                  const SizedBox(height: 2),
+                                  AppText.text(
+                                    'Flutter Developer',
+                                    fontsize: 16,
+                                    fontweight: FontWeight.w400,
+                                    color: Colors.white,
+                                  ),
+                                  const SizedBox(height: 10),
+                                  AppText.text(
+                                    'Employee Id: EMP-9017',
+                                    fontsize: 14,
+                                    fontweight: FontWeight.w400,
+                                    color: const Color.fromARGB(
+                                        255, 197, 197, 197),
+                                  ),
                                 ],
                               ),
                             ],
@@ -85,15 +152,39 @@ class HomeView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AppText.text('Open Tasks'),
-                              AppText.text('3'),
+                              AppText.text(
+                                'Open Tasks',
+                                fontsize: 12,
+                                fontweight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                              const SizedBox(height: 5),
+                              AppText.text(
+                                '3',
+                                fontsize: 20,
+                                fontweight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
                             ],
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AppText.text('Projects'),
-                              AppText.text('3'),
+                              AppText.text(
+                                'Projects',
+                                fontsize: 12,
+                                fontweight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
+                              const SizedBox(height: 5),
+                              AppText.text(
+                                '3',
+                                fontsize: 20,
+                                color: Colors.white,
+                                fontweight: FontWeight.w700,
+                              ),
                             ],
                           ),
                         ],
@@ -102,9 +193,7 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               HomeComponents.bodyConatiner(context,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -115,15 +204,39 @@ class HomeView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AppText.text('3'),
-                              AppText.text('Pending'),
+                              AppText.text(
+                                '3',
+                                fontsize: 20,
+                                fontweight: FontWeight.w700,
+                                color: const Color.fromARGB(255, 87, 126, 255),
+                              ),
+                              const SizedBox(height: 5),
+                              AppText.text(
+                                'Pending',
+                                fontsize: 12,
+                                fontweight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
                             ],
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AppText.text('3'),
-                              AppText.text('Overdue'),
+                              AppText.text(
+                                '3',
+                                fontsize: 20,
+                                fontweight: FontWeight.w700,
+                                color: Colors.red,
+                              ),
+                              const SizedBox(height: 5),
+                              AppText.text(
+                                'Overdue',
+                                fontsize: 12,
+                                fontweight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
                             ],
                           ),
                         ],
@@ -143,19 +256,43 @@ class HomeView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AppText.text('3'),
-                              AppText.text('In Progress'),
+                              AppText.text(
+                                '3',
+                                fontsize: 20,
+                                fontweight: FontWeight.w700,
+                                color: const Color.fromARGB(255, 87, 126, 255),
+                              ),
+                              const SizedBox(height: 5),
+                              AppText.text(
+                                'In Progress',
+                                fontsize: 12,
+                                fontweight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
                             ],
                           ),
                           Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              AppText.text('3'),
-                              AppText.text('Overdue'),
+                              AppText.text(
+                                '3',
+                                fontsize: 20,
+                                color: Colors.red,
+                                fontweight: FontWeight.w700,
+                              ),
+                              const SizedBox(height: 5),
+                              AppText.text(
+                                'Overdue',
+                                fontsize: 12,
+                                fontweight: FontWeight.w500,
+                                color: Colors.white,
+                              ),
                             ],
                           ),
                         ],
-                      )
+                      ),
                     ],
                   )),
               const SizedBox(
@@ -336,6 +473,7 @@ class HomeView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           const Icon(
+                            // ignore: deprecated_member_use
                             FontAwesomeIcons.tasks,
                             color: AppColors.linearPercentIndecatorColor,
                             size: 30,
@@ -434,6 +572,7 @@ class HomeView extends StatelessWidget {
                     const Align(
                       alignment: Alignment.center,
                       child: Icon(
+                        // ignore: deprecated_member_use
                         FontAwesomeIcons.homeUser,
                         color: AppColors.linearPercentIndecatorColor,
                         size: 30,
@@ -467,6 +606,7 @@ class HomeView extends StatelessWidget {
                     const Align(
                       alignment: Alignment.center,
                       child: Icon(
+                        // ignore: deprecated_member_use
                         FontAwesomeIcons.birthdayCake,
                         color: AppColors.linearPercentIndecatorColor,
                         size: 30,

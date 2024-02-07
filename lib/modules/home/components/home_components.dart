@@ -8,7 +8,7 @@ class HomeComponents {
       height: 2,
       width: AppConfig(context).width,
       color: AppColors.white.withOpacity(0.5),
-      margin: const EdgeInsets.only(bottom: 15, top: 15),
+      margin: const EdgeInsets.symmetric(vertical: 25),
     );
   }
 

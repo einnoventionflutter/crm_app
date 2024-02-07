@@ -19,6 +19,8 @@ class Appbutton {
     bool onlyIcon = false,
     double borderradius = 10,
     Color backGroundColor = AppColors.primaryButtonColor,
+    bool isBorder = false,
+    FontWeight? fontWeight,
   }) {
     return Material(
       borderRadius: BorderRadius.circular(borderradius),
@@ -28,22 +30,24 @@ class Appbutton {
         onTap: () => {callback()},
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(borderradius),
-              boxShadow: isShadow
-                  ? [
-                      BoxShadow(
-                        color: backGroundColor.withOpacity(0.3),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset:
-                            const Offset(0, 3), // changes position of shadow
-                      ),
-                    ]
-                  : [],
-              border: Border.all(
-                color: Colors.white,
-                width: 0.5,
-              )),
+            borderRadius: BorderRadius.circular(borderradius),
+            boxShadow: isShadow
+                ? [
+                    BoxShadow(
+                      color: backGroundColor.withOpacity(0.3),
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: const Offset(0, 3), // changes position of shadow
+                    ),
+                  ]
+                : [],
+            border: isBorder
+                ? Border.all(
+                    color: Colors.white,
+                    width: 0.5,
+                  )
+                : null,
+          ),
           height: height,
           width: width,
           child: onlyIcon
@@ -59,7 +63,7 @@ class Appbutton {
                       Icon(
                         icon,
                         color: textColor,
-                        size: 15,
+                        size: 18,
                       ),
                     },
                     AppText.text(
@@ -67,7 +71,7 @@ class Appbutton {
                       fontsize: fontsize == 0
                           ? AppConfig(context).width / 30
                           : fontsize,
-                      fontweight: FontWeight.w700,
+                      fontweight: fontWeight ?? FontWeight.w700,
                       color: textColor,
                     ),
                   ],
