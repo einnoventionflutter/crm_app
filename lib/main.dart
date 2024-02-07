@@ -1,4 +1,4 @@
-import 'package:crm_app/modules/dashboard/views/dashboard_view.dart';
+import 'package:crm_app/crm_rendering.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: DashboardView(),
+      home: CrmRendering(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // ignore: prefer_const_declarations
-  static const Color primaryDark = Color.fromARGB(255, 10, 100, 84);
+  static const Color primaryDark = Color.fromARGB(255, 36, 43, 78);
   static const Color primaryLight = Color.fromARGB(255, 42, 136, 119);
   static const Color linearPercentIndecatorColor = Color(0xff6c757d);
   static const Color primaryColor = Color(0xff181c34);

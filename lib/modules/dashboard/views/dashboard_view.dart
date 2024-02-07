@@ -17,10 +17,14 @@ class DashboardView extends StatelessWidget {
       const AttendanceView(),
     ];
     return Obx(
-      () => Scaffold(
-        appBar: CustomeAppBar.simpleAppBar(context),
-        drawer: AppDrawer(dController: _controller),
-        body: screens[_controller.pageIndex.value],
+      () => PopScope(
+        canPop: false,
+        onPopInvoked: (v) {},
+        child: Scaffold(
+          appBar: CustomeAppBar.simpleAppBar(context),
+          drawer: AppDrawer(dController: _controller),
+          body: screens[_controller.pageIndex.value],
+        ),
       ),
     );
   }
