@@ -1,5 +1,5 @@
-import 'package:crm_app/utils/app_config.dart';
-import 'package:crm_app/utils/app_theme/app_colors.dart';
+import 'package:einnovention/utils/app_config.dart';
+import 'package:einnovention/utils/app_theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomeComponents {

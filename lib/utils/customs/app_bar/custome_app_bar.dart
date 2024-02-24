@@ -1,5 +1,5 @@
-import 'package:crm_app/utils/customs/app_button/app_button.dart';
-import 'package:crm_app/utils/customs/app_text/app_text.dart';
+import 'package:einnovention/utils/customs/app_button/app_button.dart';
+import 'package:einnovention/utils/customs/app_text/app_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

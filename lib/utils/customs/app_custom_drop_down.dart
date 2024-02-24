@@ -1,5 +1,6 @@
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
-import 'package:crm_app/utils/customs/app_text/app_text.dart';
+import 'package:einnovention/utils/customs/app_text/app_text.dart';
+
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

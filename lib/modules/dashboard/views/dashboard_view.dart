@@ -1,8 +1,8 @@
-import 'package:crm_app/modules/attendance/views/attendance_view.dart';
-import 'package:crm_app/modules/dashboard/controller/dashboard_controller.dart';
-import 'package:crm_app/modules/home/views/home_view.dart';
-import 'package:crm_app/utils/customs/app_bar/custome_app_bar.dart';
-import 'package:crm_app/utils/customs/app_drawer.dart';
+import 'package:einnovention/modules/attendance/views/attendance_view.dart';
+import 'package:einnovention/modules/dashboard/controller/dashboard_controller.dart';
+import 'package:einnovention/modules/home/views/home_view.dart';
+import 'package:einnovention/utils/customs/app_bar/custome_app_bar.dart';
+import 'package:einnovention/utils/customs/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

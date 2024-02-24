@@ -1,5 +1,5 @@
-import 'package:crm_app/modules/home/views/home_view.dart';
-import 'package:crm_app/utils/app_routes/app_routes.dart';
+import 'package:einnovention/modules/home/views/home_view.dart';
+import 'package:einnovention/utils/app_routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class AppPages {
